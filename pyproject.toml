@@ -4,17 +4,22 @@ build-backend = "pdm.backend"
 
 [project]
 # name it as your package name
-name = "quanttide-template-of-python-project"
+name = "quanttide-doc-agents"
 # semetric versions
 version = "0.1.0-alpha.1"
 # describe the package within one sentence
-description = "QuantTide Template of Python Project"
-authors = [{name = "QuantTide Inc.", email = "opensource@quanttide.com"}]
+description = "QuantTide Documentation Agents"
+authors = [
+    {name = "QuantTide Inc.", email = "opensource@quanttide.com"},
+    {name = "Guo Zhang", email = "zhangguo@quanttide.com"}
+]
 classifiers = [
     "Programming Language :: Python :: 3",
 ]
 requires-python = '>=3.8'
 dependencies = [
+    "dashscope>=1.19.2",
+    "python-dotenv>=1.0.1",
 ]
 # dynamic = ["version"]
 
@@ -28,5 +33,11 @@ content-type = "text/markdown"
 
 [tool.pdm.build]
 includes = [
-    "python_package",
+    "quanttide_doc_agents",
+]
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest>=8.2.2",
+    "coverage>=7.5.3",
 ]

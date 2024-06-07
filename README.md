@@ -1,2 +1,4 @@
-# Python Package Template
+# `quanttide-doc-agents`
+
+QuantTide Documentation Agents
 
